@@ -97,7 +97,7 @@ for patient_data in range(len(filepaths)):
 
     # Parent Directory path
     # parent_dir = "/home/jabbar/project_tomo/CTGAN
-    parent_dir = "/home/jabbar/project_tomo/CTGAN/data/Scapis101"
+    parent_dir = "/home/jabbar/data/Scapis101"
     # New Directory
     count = str(patient_data+1)
     count = count.zfill(4)

@@ -1,0 +1,16 @@
+# Project exclude paths
+/env_tomo/
+*.h5
+*.zip
+*.hdf5
+*.tar
+*.dicom
+*.pth
+*.idea
+*.png
+*.mha
+env_tomo/*
+*.swp
+*.html
+*/*.idea
+*.pyc
