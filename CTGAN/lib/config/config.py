@@ -10,7 +10,9 @@ __C = EasyDict()
 cfg = __C
 
 # Model Path
-__C.MODEL_SAVE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'save_models'))
+#__C.MODEL_SAVE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..', 'save_models'))
+__C.MODEL_SAVE_PATH = os.path.join('/home/jabbar/results_project_tomo/', 'save_models')
+#__C.MODEL_SAVE_PATH = os.path.abspath(os.path.join(my_path, '..', '..', 'save_models'))
 __C.CT_MIN_MAX = [0, 5800]
 __C.XRAY1_MIN_MAX = [0, 1200]
 __C.XRAY2_MIN_MAX = [0, 1700]
@@ -158,7 +160,7 @@ __C.TD_GAN.map_m_lambda = 0.
 __C.TD_GAN.map_m_type = 'l1'
 __C.TD_GAN.fea_m_map_lambda = 10.
 # Discriminator train times
-__C.TD_GAN.critic_times = 1
+__C.TD_GAN.critic_times = 2
 
 '''
 3D GD-GAN define structure

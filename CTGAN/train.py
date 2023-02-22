@@ -44,19 +44,21 @@ def parse_args():
   parse.add_argument('--verbose', action='store_true', dest='verbose',
                      help='if specified, print more debugging information')
   args = parse.parse_args()
-  """
-  args.ymlpath = './experiment/multiview2500/d2_multiview2500.yml'
-  args.dataroot = './data/SCAPISData1'
-  args.dataset = 'train'
-  args.gpu = '0'
-  args.tag = 'd2_multiview2500'
-  args.data = 'LIDC256'
-  args.dataset_class = 'align_ct_xray_views_std'
-  args.model_class = 'MultiViewCTGAN'
-  args.datasetfile = './data/train.txt'
-  args.valid_datasetfile = './data/test.txt'
-  args.valid_dataset = 'test'
-  """
+
+
+  # args.ymlpath = './experiment/singleview2500/d2_singleview2500.yml'
+  # args.dataroot = '/home/jabbar/results_project_tomo/data/Scapis100'
+  # args.dataset = 'train'
+  # args.gpu = '0'
+  # args.tag = 'd2_multiview2500'
+  # args.data = 'LIDC256'
+  # args.dataset_class = 'align_ct_xray_views_std'
+  # args.model_class = 'MultiViewCTGAN'
+  # args.datasetfile = '/home/jabbar/results_project_tomo/data/test.txt'
+  # args.valid_datasetfile = './data/test.txt'
+  # args.valid_dataset = 'test'
+  # args.resultdir='/home/jabbar/results_project_tomo/singleview'
+
   return args
 
 if __name__ == '__main__':
@@ -187,6 +189,8 @@ if __name__ == '__main__':
       # visualizer.add_average_scalers('Epoch Metrics', metrics_dict, step=total_steps, write=False)
 
       if total_steps % opt.print_freq == 0:
+        #print("\nPSNR: ",gan_model.metrics_PSNR)
+        #print("\nSSIM: ", gan_model.metrics_CosineSimilarity)
         print('total step: {} timer: {:.4f} sec.'.format(total_steps, t1 - t0))
         print('epoch {}/{}, step{}:{} || total loss:{:.4f}'.format(epoch, opt.niter + opt.niter_decay,
                                                                    epoch_i, dataset_size, total_loss))

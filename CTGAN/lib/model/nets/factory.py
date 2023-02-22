@@ -42,7 +42,7 @@ def define_D(input_nc, ndf, which_model_netD, n_layers_D=3,
 
 def define_3DG(noise_len, input_shape, output_shape, input_nc, output_nc, ngf, which_model_netG, n_downsampling,
              norm='batch', use_dropout=False, init_type='normal', gpu_ids=[], n_blocks=9,
-               encoder_input_shape=(128,128), encoder_input_nc=1, encoder_norm='instance2d', encoder_blocks=3, skip_num=1, activation_type='relu', opt=None):
+               encoder_input_shape=(1943,1967), encoder_input_nc=53, encoder_norm='instance2d', encoder_blocks=3, skip_num=1, activation_type='relu', opt=None):
   netG = None
   decoder_norm_layer = get_norm_layer(norm_type=norm)
   encoder_norm_layer = get_norm_layer(norm_type=encoder_norm)
