@@ -38,7 +38,9 @@
 
 
 ### Train from Scratch
-Please use the following example settings to train your model. 
+The code is set to run from Pycharm's Terminal.
+Before run the code go to the directory.  /home/jabbar/project_tomo/CTGAN
+Then please use the following example settings to train, Test or your model or visualize. 
 
 1. **Single-view Input Parameters for Training Script：**  
 python3 train.py --ymlpath=./experiment/singleview2500/d2_singleview2500.yml  --gpu=0  --dataroot=/home/jabbar/results_project_tomo/data/Scapis100 --dataset=train --tag=d2_singleview2500 --data=LIDC256 --dataset_class=align_ct_xray_std --model_class=SingleViewCTGAN --datasetfile=/home/jabbar/results_project_tomo/data/train.txt --valid_datasetfile=/home/jabbar/results_project_tomo/data/test.txt --valid_dataset=test    
@@ -55,6 +57,14 @@ python3 test.py --ymlpath=./experiment/singleview2500/d2_singleview2500.yml --gp
 
 2. **Multi-view Input Parameters for Test Script：**  
 python3 test.py --ymlpath=./experiment/multiview2500/d2_multiview2500.yml --gpu=0 --dataroot=/home/jabbar/results_project_tomo/data/SCAPISData1 --dataset=test --tag=d2_multiview2500 --data=LIDC256 --dataset_class=align_ct_xray_views_std --model_class=MultiViewCTGAN --datasetfile=./data/test.txt --resultdir=./multiview --check_point=90 --how_many=3
+
+### To visualize
+1. **Single-view Input Parameters for visualize Script：**
+python3 visual.py --ymlpath=./experiment/singleview2500/d2_singleview2500.yml --gpu=0 --dataroot=/home/jabbar/results_project_tomo/data/Scapis100 --dataset=test --tag=d2_singleview2500 --data=LIDC256 --dataset_class=align_ct_xray_std --model_class=SingleViewCTGAN --datasetfile=/home/jabbar/results_project_tomo/data/test.txt --resultdir=/home/jabbar/results_project_tomo/singleview --check_point=30 --how_many=3
+
+2. **Multi-view Input Parameters for visualize Script：**  
+python3 visual.py --ymlpath=./experiment/multiview2500/d2_multiview2500.yml --gpu=0 --dataroot=/home/jabbar/results_project_tomo/data/SCAPISData1 --dataset=test --tag=d2_multiview2500 --data=LIDC256 --dataset_class=align_ct_xray_views_std --model_class=MultiViewCTGAN --datasetfile=./data/test.txt --resultdir=./multiview --check_point=90 --how_many=3
+
 
 ## Results
 ----
